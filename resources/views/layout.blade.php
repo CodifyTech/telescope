@@ -230,6 +230,9 @@
 <!-- Global Telescope Object -->
 <script>
     window.Telescope = @json($telescopeScriptVariables);
+
+    var telescopePath = "{{ ltrim(parse_url(url(config('telescope.path')))['path'], '/') }}";
+    window.Telescope.path = telescopePath;
 </script>
 
 <script src="{{ asset(mix('app.js', 'vendor/telescope')) }}"></script>
