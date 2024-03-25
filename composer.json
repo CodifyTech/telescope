@@ -3,6 +3,7 @@
     "description": "An elegant debug assistant for the Laravel framework.",
     "keywords": ["laravel", "monitoring", "debugging"],
     "license": "MIT",
+    "version": "4.0.1",
     "authors": [
         {
             "name": "Taylor Otwell",
