@@ -92,12 +92,10 @@ new Vue({
             this.recording = !this.recording;
         },
 
-        clearEntries(shouldConfirm = true) {
-            if (shouldConfirm && !confirm('Are you sure you want to delete all Telescope data?')) {
-                return;
-            }
+        clearEntries() {
+            axios.post(Telescope.basePath + '/telescope-api/clear-entries');
 
-            axios.delete(Telescope.basePath + '/telescope-api/entries').then((response) => location.reload());
+            this.$emit('clear-entries');
         },
 
         keydownListener(event) {
